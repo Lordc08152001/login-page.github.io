@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+:root{
+    --primary-color: #F8F7FC;
+    --secondary-color: #231E1E;
+    --accent-color: #FC8C1B;
+}
+
+:root {
+    --main-color: #800000;
+    --main-light: #7c7c7c;
+    --main-dark: #80000079;
+    --color-white: #fff;
+    --button-color: #491c1c;
+    --hover-color-buton: gray;
+    --color-black: #000000;
+	--background: linear-gradient(to right, rgba(70, 0, 23, 0.9), rgb(0 0 0 / 85%));
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif ;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../../images/background.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.registration-container{
+    background: var(--background);
+    margin: 0 40px;
+    padding: 15px 25px;
+    width: 640px;
+    border-radius: 10px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border: 1px solid var(--main-color);
+}
+
+.registration-container .user-img{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.registration-container .user-img img{
+	border-radius: 100px;
+}
+
+.registration-container .registration-header{
+    padding: 10px;
+}
+.registration-header p{
+    color: orange;
+    font-size: 2rem;
+    font-weight: 800;
+	text-align: center;
+    border-bottom: 1px solid;
+}
+
+.registration-body .registration-box{
+    position: relative;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px 0px;
+
+}
+.registration-box .input-box{
+    position: relative;
+    width: 50%;
+    justify-content: space-around;
+    padding: 05px 10px;
+    display: block;
+}
+
+.registration-box .input-box input {
+	color: var(--color-white);
+    padding: 20px 20px;
+    border: 1px solid var(--color-white);
+    border-radius: 2px;
+    outline: none;
+    font-family: verdana;
+    background: transparent;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 15px;
+}
+
+.registration-box .input-box input::placeholder{
+	color: var(--color-white);
+}
+
+
+.registration-box .input-box input:hover {
+	transition: .5s;
+    border: 1px solid var(--main-color);
+}
+
+.registration-box .input-box label{
+    font-size: 14px;
+    color: gray;
+}
+.registration-box .input-field{
+    width: 100%;
+    height: 36px;
+    border-radius: 4px;
+    border: 1px solid #1b1b1b46;
+    padding-left: 8px;
+    display: block;
+}
+
+.registration-body .btn-register{
+    display: block;
+    margin-top: 40px;
+    margin-left: 40px;
+    height: 40px;
+    width: 78.5%;
+    padding-bottom: 20px;
+    text-align: center;
+    background: transparent;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    border: 2px solid #bb3333;
+    font-size: 22px;
+    color: var(--color-white);
+    cursor: pointer;
+    transition: .3s;
+}
+.registration-body .btn-register:hover{
+    transition: .5s;
+    color: #d5dbdd;
+    border: 2px solid var(--hover-color);
+    background: linear-gradient(#bb3333, #2c3e50);
+}
+
+.registration-container .registration-footer{
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    color: var(--color-white);
+    margin-top: 15px;
+}
+
+.registration-footer a{
+    margin-left: .3rem;
+    color: cyan;
+    font-weight: 700;
+}
+
+.registration-footer a:hover{
+    color: var(--hover-color);
+}
+
+
+/** Mobile Device **/
+@media  screen and (max-width:500px) {
+	.registration-container{
+		margin: 0 10px;
+	
+	}
+}
+
+@media  screen and (max-width:480px) {
+    .registration-container{
+        display: block;
+        padding: 10px;
+        border-radius: 12px;
+        box-shadow: 10px 14px 90px #f5ac6252;
+        max-width: 400px;
+    }
+    .registration-container .registration-header{
+        padding: 10px 0px;
+    }
+    .registration-body .registration-box{
+        display: block;
+    }
+    .registration-box .input-box{
+        width: 100%;
+        justify-content: space-around;
+        padding: 05px 0px;
+        display: block;
+    }
+    .registration-body .btn-register{
+        width: 100%;
+        margin: auto;
+    }
+}
